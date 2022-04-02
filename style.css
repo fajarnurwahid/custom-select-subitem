@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+
+
+
+/* SELECT */
+.select {
+    display: inline-block;
+    position: relative;
+}
+.select-area {
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.select-dropdown {
+    position: absolute;
+    top: calc(100% + .25rem);
+    left: 0;
+    border: 1px solid #ccc;
+    max-height: 260px;
+    overflow-y: auto;
+    border-radius: .25rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s;
+    min-width: 100%;
+}
+.select-dropdown.active {
+    visibility: visible;
+    opacity: 1;
+}
+.select-input {
+    padding: .5rem;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.select-input input {
+    padding: .25rem .5rem;
+    outline: none;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.select-menu li {
+    white-space: nowrap;
+}
+.select-menu > li span {
+    font-weight: 500;
+    padding: .25rem .5rem;
+}
+.select-submenu li {
+    font-size: .875rem;
+    padding: .25rem .5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.select-submenu li:hover {
+    background: #f5f5f5;
+}
+.select-submenu {
+    margin-bottom: 1rem;
+}
+/* SELECT */
